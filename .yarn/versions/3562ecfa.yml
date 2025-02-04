@@ -1,0 +1,7 @@
+undecided:
+  - "@everestsystems/language-vscode-extension"
+  - "@everestsystems/metadata-language"
+  - "@everestsystems/metadata-language-infra"
+  - "@everestsystems/metadata-language-integration-test"
+  - "@everestsystems/metadata-language-interpreter"
+  - "@everestsystems/metadata-language-trafo2interpreter"

@@ -1,0 +1,15 @@
+diff --git a/lib/common/client.js b/lib/common/client.js
+index e49c166a72b82b877b67b18075f6731f415186ae..86922b70f99a9770cb1a353887c043f7ffd6a13e 100644
+--- a/lib/common/client.js
++++ b/lib/common/client.js
+@@ -1030,8 +1030,9 @@ class BaseLanguageClient {
+         async function didChangeWatchedFile(event) {
+             client._fileEvents.push(event);
+             return client._fileEventDelayer.trigger(async () => {
+-                await client.sendNotification(vscode_languageserver_protocol_1.DidChangeWatchedFilesNotification.type, { changes: client._fileEvents });
++                const events = client._fileEvents;
+                 client._fileEvents = [];
++                await client.sendNotification(vscode_languageserver_protocol_1.DidChangeWatchedFilesNotification.type, { changes: events });
+             });
+         }
+         const workSpaceMiddleware = this.clientOptions.middleware?.workspace;

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ESNext", "dom"],
+    "sourceMap": true,
+    "outDir": "./public/js",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+  },
+  "include": ["src/*.ts", "build.mjs"],
+  "exclude": ["public", "static", "node_modules"]
+}

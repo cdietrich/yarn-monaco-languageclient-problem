@@ -1,0 +1,13 @@
+{
+  "name": "projectb",
+  "packageManager": "yarn@4.6.0",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/compat": "^1.2.6",
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^22.13.1",
+    "@types/vscode": "^1.85.2",
+    "jest": "^29.7.0",
+    "typescript": "^5.7.3"
+  }
+}

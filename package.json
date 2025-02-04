@@ -1,0 +1,7 @@
+{
+  "name": "yarn-monaco-lc-problem",
+  "packageManager": "yarn@4.6.0",
+  "workspaces": [
+    "packages/*"
+  ]
+}

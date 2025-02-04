@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "out",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "webworker", "ESNext"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["out", "node_modules"]
+}
