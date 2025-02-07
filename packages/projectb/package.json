@@ -45,6 +45,7 @@
     "@eslint/compat": "^1.2.6",
     "@jest/globals": "^29.7.0",
     "@types/node": "20",
+    "@types/vscode": "^1.85.2",
     "@vscode/test-electron": "^2.4.1",
     "@vscode/vsce": "3.2.2",
     "depcheck": "^1.4.5",

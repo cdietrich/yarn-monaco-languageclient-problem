@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/extension.ts"],
-  "sourcesContent": ["import * as vscode from 'vscode';\n\nlet uri = vscode.Uri.file('file:///path/to/file');\nconsole.log(uri)\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;AAAA,aAAwB;AAExB,IAAI,MAAa,WAAI,KAAK,sBAAsB;AAChD,QAAQ,IAAI,GAAG;",
+  "sourcesContent": ["import type { LanguageClient } from \"vscode-languageclient/node.js\"\n\nimport * as vscode from 'vscode';\n\nlet client: LanguageClient | undefined\n\n// This function is called when the extension is deactivated.\nexport function deactivate(): Thenable<void> | undefined {\n  if (client !== undefined) {\n    return client.stop()\n  }\n  return undefined\n}\n\n// This function is called when the extension is activated.\nexport async function activate(_context: vscode.ExtensionContext): Promise<void> {}\n\nlet uri = vscode.Uri.file('file:///path/to/file');\nconsole.log(uri)"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,aAAwB;AAExB,IAAI;AAGG,SAAS,aAAyC;AACvD,MAAI,WAAW,QAAW;AACxB,WAAO,OAAO,KAAK;AAAA,EACrB;AACA,SAAO;AACT;AAGA,eAAsB,SAAS,UAAkD;AAAC;AAElF,IAAI,MAAa,WAAI,KAAK,sBAAsB;AAChD,QAAQ,IAAI,GAAG;",
   "names": []
 }
