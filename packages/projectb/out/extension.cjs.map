@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/extension.ts"],
+  "sourcesContent": ["import * as vscode from 'vscode';\n\nlet uri = vscode.Uri.file('file:///path/to/file');\nconsole.log(uri)\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;AAAA,aAAwB;AAExB,IAAI,MAAa,WAAI,KAAK,sBAAsB;AAChD,QAAQ,IAAI,GAAG;",
+  "names": []
+}

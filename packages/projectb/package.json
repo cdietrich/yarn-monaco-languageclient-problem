@@ -1,7 +1,33 @@
 {
   "name": "projectb",
-  "packageManager": "yarn@4.6.0",
-  "type": "module",
+  "displayName": "demo2",
+  "description": "demo2.",
+  "version": "0.4.4",
+  "engines": {
+    "vscode": "^1.85.2"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./out/extension.cjs",
+  "scripts": {
+    "vscode:prepublish": "npm run esbuild-base",
+    "esbuild-base": "node ./esbuild.js",
+    "esbuild": "npm run esbuild-base",
+    "esbuild-watch": "npm run esbuild-base -- --watch",
+    "test-compile": "tsc -p ./tsconfig.src.json",
+    "compile": "tsc -p ./tsconfig.src.json",
+    "watch": "tsc -p ./tsconfig.src.json",
+    "build": "npm run compile && npm run esbuild-base",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test:extension": "node ./out/test/scripts/runTests.cjs",
+    "test:profiling": "node --cpu-prof --inspect --experimental-vm-modules ../../node_modules/jest-cli/bin/jest.js --runInBand",
+    "lint": "eslint . --cache",
+    "generate-package": "vsce package --no-dependencies",
+    "prepublishOnly": "npm run build",
+    "depcheck": "depcheck",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "commander": "^13.1.0",
     "elkjs": "0.9.3",
@@ -31,7 +57,5 @@
     "vscode-languageserver-textdocument": "^1.0.12",
     "vscode-languageserver-types": "3.17.5"
   },
-  "scripts": {
-    "build": "tsc src/index.ts"
-  }
+  "type": "module"
 }
